@@ -1,0 +1,14 @@
+artifact_uri: file:C:/PROJECT AKHIR PIJAK 2/SMSML_Chellyne/Membangun_model/mlruns/877282463428693062/c38f0373cc3848b5962fdfcd2e93e432/artifacts
+end_time: 1780283549018
+entry_point_name: ''
+experiment_id: '877282463428693062'
+lifecycle_stage: active
+run_id: c38f0373cc3848b5962fdfcd2e93e432
+run_name: Random_Forest_Tuning
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780283540067
+status: 3
+tags: []
+user_id: chellyne

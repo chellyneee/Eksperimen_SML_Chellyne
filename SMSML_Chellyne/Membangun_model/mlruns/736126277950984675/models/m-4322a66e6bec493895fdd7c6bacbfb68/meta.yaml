@@ -1,0 +1,10 @@
+artifact_location: file:C:/PROJECT AKHIR PIJAK 2/SMSML_Chellyne/Membangun_model/mlruns/736126277950984675/models/m-4322a66e6bec493895fdd7c6bacbfb68/artifacts
+creation_timestamp: 1780060641134
+experiment_id: '736126277950984675'
+last_updated_timestamp: 1780060650359
+model_id: m-4322a66e6bec493895fdd7c6bacbfb68
+model_type: null
+name: model
+source_run_id: d47b9e26dbc0410a977f888a3130de48
+status: 2
+status_message: null
