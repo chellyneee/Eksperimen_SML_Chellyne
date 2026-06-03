@@ -1,0 +1,30 @@
+name: Machine Learning CI Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  re-train-model:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository Code
+        uses: actions/checkout@v3
+
+      - name: Set up Python Environment
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install MLflow and Dependencies
+        run: |
+          pip install mlflow scikit-learn pandas
+
+      - name: Run MLflow Project Re-training
+        run: |
+          mlflow run MLProject --entry-point main
