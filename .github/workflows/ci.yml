@@ -76,6 +76,3 @@ jobs:
       - name: Push Docker Image
         run: |
           docker push ${{ secrets.USERNAME }}/eksperimen-sml-chellyne:latest
-      - name: Build Docker Model
-        run: |
-          mlflow models build-docker --model-uri "runs:/$RUN_ID/model" --name "cc"
