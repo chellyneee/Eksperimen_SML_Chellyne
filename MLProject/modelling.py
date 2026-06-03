@@ -13,6 +13,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 import mlflow
+import joblib
 
 # 1. Mengaktifkan fitur Autolog dari MLflow (Syarat Kriteria Basic)
 mlflow.autolog()
@@ -50,6 +51,10 @@ def train_model():
         print(f"Model berhasil dilatih!")
         print(f"Akurasi Data Training: {train_acc:.4f}")
         print(f"Akurasi Data Testing : {test_acc:.4f}")
+
+        os.makedirs("outputs", exist_ok=True)
+        joblib.dump(model, "outputs/tourism_model.pkl")
+        print("✅ File model fisik berhasil disimpan di folder outputs/")
 
 if __name__ == "__main__":
     train_model()
