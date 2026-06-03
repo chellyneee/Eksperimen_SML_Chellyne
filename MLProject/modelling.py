@@ -52,9 +52,23 @@ def train_model():
         print(f"Akurasi Data Training: {train_acc:.4f}")
         print(f"Akurasi Data Testing : {test_acc:.4f}")
 
-        os.makedirs("outputs", exist_ok=True)
-        joblib.dump(model, "outputs/tourism_model.pkl")
-        print("✅ File model fisik berhasil disimpan di folder outputs/")
+        #os.makedirs("outputs", exist_ok=True)
+        #joblib.dump(model, "outputs/tourism_model.pkl")
+        #print("✅ File model fisik berhasil disimpan di folder outputs/")
+
+        model_filename = "online_model.joblib"
+        joblib.dump(model, model_filename)
+        
+        # 2. Log file tersebut sebagai artefak ke dalam MLflow
+        mlflow.log_artifact(model_filename, artifact_path="model_artifacts")
+        
+        # 3. Log struktur model scikit-learn ke MLflow
+        mlflow.sklearn.log_model(
+            sk_model=model,
+            artifact_path="online_model",
+            input_example=X_test.iloc[:5]
+        )
+        print("✅ Berhasil melakukan logging model dan artefak via MLflow API!")
 
 if __name__ == "__main__":
     train_model()
