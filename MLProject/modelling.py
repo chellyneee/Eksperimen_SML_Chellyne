@@ -18,8 +18,8 @@ import mlflow
 mlflow.autolog()
 
 # Mengatur lokasi penyimpanan lokal log eksperimen MLflow
-mlflow.set_tracking_uri("file:./mlruns")
-mlflow.set_experiment("Eksperimen_SML_Basic")
+# mlflow.set_tracking_uri("file:./mlruns")
+# mlflow.set_experiment("Eksperimen_SML_Basic")
 
 def train_model():
     # 2. Memuat dataset hasil preprocessing kemarin
