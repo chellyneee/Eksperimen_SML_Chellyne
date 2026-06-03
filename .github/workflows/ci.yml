@@ -38,6 +38,8 @@ jobs:
         pip install mlflow 
 
     - name: Run MLflow Project Re-training
+      env:
+        MLFLOW_ALLOW_FILE_STORE: "true"
       run: |
         mlflow run MLProject --env-manager local
     
