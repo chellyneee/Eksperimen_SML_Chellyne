@@ -72,7 +72,7 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
       - name: Tag Docker Image
         run: |
-          docker tag cc ${{ secrets.USERNAME }}/eksperimen-sml-chellyne:latest
+          docker tag eksperimen-sml-chellyne ${{ secrets.USERNAME }}/eksperimen-sml-chellyne:latest
       - name: Push Docker Image
         run: |
           docker push ${{ secrets.USERNAME }}/eksperimen-sml-chellyne:latest
