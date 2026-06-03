@@ -52,9 +52,9 @@ def train_model():
         print(f"Akurasi Data Training: {train_acc:.4f}")
         print(f"Akurasi Data Testing : {test_acc:.4f}")
 
-        os.makedirs("outputs", exist_ok=True)
-        joblib.dump(model, "outputs/tourism_model.joblib")
-        print("✅ File model fisik berhasil disimpan di folder outputs/")
+        #os.makedirs("outputs", exist_ok=True)
+        #joblib.dump(model, "outputs/tourism_model.joblib")
+        #print("✅ File model fisik berhasil disimpan di folder outputs/")
 
         # model_filename = "online_model.joblib"
         # joblib.dump(model, model_filename)
