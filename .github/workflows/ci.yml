@@ -50,8 +50,14 @@ jobs:
           echo "Latest run_id: $RUN_ID"
 
       - name: Upload Training Artifacts to GitHub Repository
-        uses: actions/upload-artifact@v4
-        with:
-          name: trained-model-artifacts
-          path: MLProject/outputs/
-          retention-days: 90
+      uses: actions/upload-artifact@v4
+      with:
+      name: trained-model-artifacts
+      path: MLProject/outputs/
+      retention-days: 90
+      # - name: Upload MLflow Runs Artifacts to GitHub Repository
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: mlflow-tracking-artifacts
+      #     path: mlruns/ # Mengambil langsung seluruh folder log eksperimen & model dari MLflow
+      #     retention-days: 90
