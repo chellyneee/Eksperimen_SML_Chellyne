@@ -25,10 +25,10 @@ mlflow.autolog()
 def train_model():
     # 2. Memuat dataset hasil preprocessing kemarin
     # Pastikan file 'tourism_preprocessed.csv' sudah kamu unggah di session storage Colab
-    if not os.path.exists('tourism_preprocessed.csv'):
+    if not os.path.exists('tourism_preprocessing.csv'):
         raise FileNotFoundError("Berkas tourism_preprocessed.csv tidak ditemukan! Silakan unggah terlebih dahulu.")
 
-    df = pd.read_csv('tourism_preprocessed.csv')
+    df = pd.read_csv('tourism_preprocessing.csv')
 
     # Pisahkan Fitur (X) dan Target (y)
     # Sesuaikan 'Category' dengan nama kolom target klasifikasi di datasetmu jika berbeda

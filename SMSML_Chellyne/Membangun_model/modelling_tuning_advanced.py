@@ -25,10 +25,10 @@ dagshub.init(repo_owner='chellyneee', repo_name='Eksperimen_SML_Chellyne', mlflo
 
 def train_tuning_advance():
     # Memuat dataset hasil preprocessing kemarin
-    if not os.path.exists('tourism_preprocessed.csv'):
-        raise FileNotFoundError("Berkas tourism_preprocessed.csv tidak ditemukan!")
+    if not os.path.exists('tourism_preprocessing.csv'):
+        raise FileNotFoundError("Berkas tourism_preprocessing.csv tidak ditemukan!")
 
-    df = pd.read_csv('tourism_preprocessed.csv')
+    df = pd.read_csv('tourism_preprocessing.csv')
 
     # Pisahkan Fitur (X) dan Target (y)
     X = df.drop(columns=['Category_Encoded'])
@@ -97,7 +97,7 @@ def train_tuning_advance():
         mlflow.log_artifact(plot_path, artifact_path="evaluation_plots")
 
         # 5. Log Artefak Tambahan 2: File Mentah Dataset Preprocessed yang digunakan
-        mlflow.log_artifact('tourism_preprocessed.csv', artifact_path="raw_data")
+        mlflow.log_artifact('tourism_preprocessing.csv', artifact_path="raw_data")
 
         print("Berhasil menyimpan parameter, metrik, dan MINIMAL 2 ARTEFAK TAMBAHAN ke DagsHub!")
 

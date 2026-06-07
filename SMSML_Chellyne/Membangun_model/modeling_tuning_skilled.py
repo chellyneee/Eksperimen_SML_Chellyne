@@ -23,10 +23,10 @@ mlflow.set_experiment("Eksperimen_SML_Skilled")
 
 def train_tuning():
     # 2. Memuat dataset hasil preprocessing kemarin
-    if not os.path.exists('tourism_preprocessed.csv'):
-        raise FileNotFoundError("Berkas tourism_preprocessed.csv tidak ditemukan! Silakan unggah terlebih dahulu.")
+    if not os.path.exists('tourism_preprocessing.csv'):
+        raise FileNotFoundError("Berkas tourism_preprocessing.csv tidak ditemukan! Silakan unggah terlebih dahulu.")
 
-    df = pd.read_csv('tourism_preprocessed.csv')
+    df = pd.read_csv('tourism_preprocessing.csv')
 
     # Pisahkan Fitur (X) dan Target (y) sesuai dengan kode basic kamu
     X = df.drop(columns=['Category_Encoded'])

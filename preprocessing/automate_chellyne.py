@@ -55,9 +55,9 @@ def run_preprocessing():
     df_final = df_cleaned.drop(columns=drop_text_cols, errors='ignore')
 
     # 9. EXPORT DATASET SIAP LATIH KE FOLDER TUJUAN
-    output_dir = 'namadataset_preprocessing'
+    output_dir = 'tourism_preprocessing'
     os.makedirs(output_dir, exist_ok=True)
-    output_path = os.path.join(output_dir, 'tourism_preprocessed.csv')
+    output_path = os.path.join(output_dir, 'tourism_preprocessing.csv')
     df_final.to_csv(output_path, index=False)
 
     print("\n=== PIPELINE AUTOMATION SUCCESS ===")
