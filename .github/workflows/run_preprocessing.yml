@@ -33,5 +33,5 @@ jobs:
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Action"
-          git add preprocessing/namadataset_preprocessing/tourism_preprocessed.csv
+          git add preprocessing/tourism_preprocessing/tourism_preprocessing.csv
           git diff --quiet && git diff --staged --quiet || (git commit -m "Automated update: preprocessed dataset" && git push)

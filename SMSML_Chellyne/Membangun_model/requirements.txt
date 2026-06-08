@@ -1,5 +1,0 @@
-mlflow==3.12.0
-scikit-learn==1.6.1
-pandas==2.2.2
-matplotlib==3.10.0
-dagshub==0.7.0
